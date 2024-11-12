@@ -1,0 +1,27 @@
+name: Publish
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup .Net
+        uses: actions/setup-dotnet@3
+        with:
+          dotnet-version: '8.x.x'
+
+      - name: Restore
+        run: dotnet restore ./Emergency.Responder.sln
+
+      - name: Build
+        run: dotnet build ./Emergency.Responder.sln --configuration Release --no-restore
+
+      - name: Publish
+        run: dotnet publish ./Emergency.Responder.sln --configuration Release --no-build
