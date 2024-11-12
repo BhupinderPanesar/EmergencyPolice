@@ -1,0 +1,9 @@
+services:
+  emergency-responder-service:
+    build:
+      context: ../src/Emergency.Responder
+      dockerfile: Emergency.Responder.Api/Dockerfile
+    image: emergency-responder-service
+    container_name: emergency-responder-service
+    ports:
+      - 5000:8080

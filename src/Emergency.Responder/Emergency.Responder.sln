@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Emergency.Responder.Api", "Emergency.Responder.Api\Emergency.Responder.Api.csproj", "{EC9F284E-598D-4C3A-B35F-9D3ED8A28E29}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC9F284E-598D-4C3A-B35F-9D3ED8A28E29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC9F284E-598D-4C3A-B35F-9D3ED8A28E29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC9F284E-598D-4C3A-B35F-9D3ED8A28E29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC9F284E-598D-4C3A-B35F-9D3ED8A28E29}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
