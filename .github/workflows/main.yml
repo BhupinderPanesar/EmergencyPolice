@@ -18,10 +18,10 @@ jobs:
           dotnet-version: '8.x.x'
 
       - name: Restore
-        run: dotnet restore ./Emergency.Responder.sln
+        run: dotnet restore ./src/Emergency.Responder/Emergency.Responder.sln
 
       - name: Build
-        run: dotnet build ./Emergency.Responder.sln --configuration Release --no-restore
+        run: dotnet build ./src/Emergency.Responder/Emergency.Responder.sln --configuration Release --no-restore
 
       - name: Publish
-        run: dotnet publish ./Emergency.Responder.sln --configuration Release --no-build
+        run: dotnet publish ./src/Emergency.Responder/Emergency.Responder.sln --configuration Release --no-build
