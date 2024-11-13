@@ -5,6 +5,11 @@ on:
   push:
     branches:
       - main
+
+env:
+  AZURE_WEB_APP_NAME: web-emergency-app
+  AZURE_WEB_APP_PACKAGE_PATH: "./publish"
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -24,4 +29,11 @@ jobs:
         run: dotnet build ./src/Emergency.Responder/Emergency.Responder.sln --configuration Release --no-restore
 
       - name: Publish
-        run: dotnet publish ./src/Emergency.Responder/Emergency.Responder.sln --configuration Release --no-build
+        run: dotnet publish ./src/Emergency.Responder/Emergency.Responder.sln --configuration Release --no-build --output '${{env.AZURE_WEB_APP_PACKAGE_PATH}}' 
+
+      - name: Deployment
+        uses: actions/webapps-deploy@v2
+        with:
+          app-name: ${{ env.AZURE_WEB_APP_NAME }}
+          publish-profile: ${{secrets.AZURE_PUBLISH_PROFILE}}
+          package: "${{ env.AZURE_WEB_APP_PACKAGE_PATH }}"
