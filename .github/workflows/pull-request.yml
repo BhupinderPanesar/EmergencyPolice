@@ -17,4 +17,4 @@ jobs:
           dotnet-version: 8.0.x
 
       - name: Build with .Net
-        run: dotnet build --configuration Release
+        run: dotnet build ./src/Emergency.Responder/Emergency.Responder.sln --configuration Release
