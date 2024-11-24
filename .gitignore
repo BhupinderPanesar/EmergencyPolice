@@ -482,3 +482,7 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+./src/Emergency.Responder/.idea
+./src/Emergency.Responder/Emergency.Responder.Api/obj
+./src/Emergency.Responder/Emergency.Responder.Api/bin
