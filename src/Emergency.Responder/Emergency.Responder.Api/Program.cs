@@ -13,6 +13,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/", () => "Testing");
+app.MapGet("/", () => "Testing again");
 
 app.Run();
