@@ -19,3 +19,6 @@ jobs:
 
       - name: Build with .Net
         run: dotnet build ./src/Emergency.Responder/Emergency.Responder.sln --configuration Release
+
+      - name: Test with .Net
+        run: dotnet test ./src/Emergency.Responder/Emergency.Responder.sln --configuration Release --no-build
