@@ -9,6 +9,6 @@ public class TestStringExtensions
     [Fact]
     public void WhenGivenOver12Characters_MethodHasOverTwelveCharacters_ShouldBeTrue()
     {
-        "Testing".HasOverTwelveCharacters().Should().BeTrue();
+        "Testings".HasOverTwelveCharacters().Should().BeTrue();
     }
 }
