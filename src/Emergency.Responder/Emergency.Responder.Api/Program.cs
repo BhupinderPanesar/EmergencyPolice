@@ -1,3 +1,5 @@
+using Emergency.Responder.Api.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
@@ -13,6 +15,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/", () => "Testing again");
+app.MapGet("/", () => "TestingAgain".HasOverTwelveCharacters());
 
 app.Run();
