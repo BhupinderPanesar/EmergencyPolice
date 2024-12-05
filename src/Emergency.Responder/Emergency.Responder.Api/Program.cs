@@ -15,6 +15,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/", () => "TestingAgain".HasOverTwelveCharacters());
+app.MapGet("/", () => "Welcome to Emergency app");
+
+app.MapGet("/{value}", (string value) => value.HasOverTwelveCharacters());
 
 app.Run();
