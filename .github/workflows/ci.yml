@@ -39,7 +39,7 @@ jobs:
   deploy_dev:
     name: deploy dev
     needs: build
-    uses: ./.github/workflows/step-deploy.yml
+    uses: BhupinderPanesar/EmergencyTest/.github/workflows/step-deploy.yml@main
     with:
       env: dev
     secrets: inherit
@@ -47,7 +47,7 @@ jobs:
   deploy_prod:
     name: deploy prod
     needs: deploy_dev
-    uses: ./.github/workflows/step-deploy.yml
+    uses: BhupinderPanesar/EmergencyTest/.github/workflows/step-deploy.yml@main
     with:
       env: prod
     secrets: inherit
